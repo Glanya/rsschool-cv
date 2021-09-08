@@ -1,0 +1,138 @@
+html {
+    background-color: #f6f2f3;
+    scroll-behavior: smooth;
+    font-family: Titillium Web, Arial, sans-serif;
+}
+
+body {
+    display:flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 900px;
+    box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.6);
+    background-color: #f6f2f3;
+}
+
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e0cfc7;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.header-inf {
+    display: flex;
+    padding: 20px;
+    margin-bottom: -55px
+}
+
+.header_photo {
+    border: 5px solid #c29e97;
+    border-radius: 50%;
+}
+
+h1 {
+    margin: 50px 10px 10px 10px;
+    font-size: 32px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.contacts  {
+    display: inline;
+    padding: 0px 30px 0px 0px;
+}
+
+.header-menu {
+    list-style-type: none;
+    text-align: right;
+    padding-bottom: 15px;
+}
+  
+.header-menu li {
+    display: inline;
+    padding: 0px 30px 0px 0px;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.link:hover {
+    color: #c29e97;
+    transition: 0.5s;
+}
+
+.section-container-paddings {
+    margin-left: auto ;
+    margin-right: auto;
+    margin-top: 20px;
+    padding: 20px 10px;
+    max-width: 900px;
+    background-color: #e0cfc7;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1); 
+}
+
+h2 {
+    margin: 30px 0px 0px 0px;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    font-size: 26px;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+    line-height: 26px;
+}
+ 
+.list {
+    list-style-type: none;
+}
+ 
+.list li {
+    font-size: 18px;
+    line-height: 30px;
+    color: black;
+}
+
+.project-link {
+    text-decoration: underline;
+    color: black;
+}
+
+ footer {
+    height: 80px;
+    margin: 10px 0px 0px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #e0cfc7;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1); 
+ }
+
+.icon {
+    padding: 10px;
+}
+
+.git-icon {
+    width: 55px;
+    height: auto;
+}
+
+.rss-icon { 
+    width: 100px;
+    height: auto; 
+}
