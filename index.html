@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/base16/cupcake.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400&display=swap" rel="stylesheet">
@@ -13,107 +17,205 @@
 
 <body>
     <div class="wrapper">
-    <header>
-        <div class="header-inf">
-            <img class="header_photo" src="assets/avatar.jpg" alt="my photo" width="200" height="250">
-            <h1>Glafira Sokolovskaya</h1>
-            <article class="contacts">
-                <h2>Contact information</h2>
-                <ul>
-                    <li><strong>Cell: </strong><a class="link" href="tel:+375(29)368-03-19">+375(29)368-03-19</a></li>
-                    <li><strong>E-mail: </strong><a class="link"
-                            href="mailto:sokolovskayaglafira@gmail.com">sokolovskayaglafira@gmail.com</a></li>
-                    <li><strong>GitHub: </strong> <a class="link" href="https://github.com/Glanya">Glanya</a></li>
-                </ul>
-            </article>
-        </div>
-        <nav>
-            <ul class="header-menu">
-                <li>
-                    <a class="link" href="#about-me">About me</a>
-                </li>
-                <li>
-                    <a class="link" href="#skills">Skills</a>
-                </li>
-                <li>
-                    <a class="link" href="#education">Education</a>
-                </li>
-                <li>
-                    <a class="link" href="#work-experience">Work experience</a>
-                </li>
-                <li>
-                    <a class="link" href="#english">English</a>
-                </li>
-                <li>
-                    <a class="link" href="#code-example">Code example</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="about-me">
-            <h2>About me</h2>
-            <div class="section-container-paddings">
-                <p>А purposeful person, motivated to constantly develop and set new goals for myself. I always try to learn quickly and apply my knowledge in practice.</p>
+        <header>
+            <div class="header-inf">
+                <div class="burger">
+                    <input id="menu__toggle" type="checkbox">
+                    <label class="menu__btn" for="menu__toggle">
+                        <span></span>
+                    </label>
+                    <ul class="burger-menu">
+                        <li>
+                            <a class="burger__item link" href="#about-me">About me</a>
+                        </li>
+                        <li>
+                            <a class="burger__item link" href="#skills">Skills</a>
+                        </li>
+                        <li>
+                            <a class="burger__item link" href="#education">Education</a>
+                        </li>
+                        <li>
+                            <a class="burger__item link" href="#work-experience">Work experience</a>
+                        </li>
+                        <li>
+                            <a class="burger__item link" href="#english">English</a>
+                        </li>
+                        <li>
+                            <a class="burger__item link" href="#code-example">Code example</a>
+                        </li>
+                        <li>
+                            <a class="burger__item link" href="#projects">Projects</a>
+                        </li>
+                    </ul>
+                </div>
+                <img class="header_photo" src="assets/avatar.jpg" alt="my photo" width="200" height="270">
+                <h1>Glafira Sokolovskaya</h1>
+                <article class="contacts">
+                    <h2>Contact information</h2>
+                    <ul class="contacts-nav">
+                        <li><strong>Cell: </strong><a class="link" href="tel:+375(29)368-03-19">+375(29)368-03-19</a>
+                        </li>
+                        <li><strong>E-mail: </strong><a class="link"
+                                href="mailto:sokolovskayaglafira@gmail.com">sokolovskayaglafira@gmail.com</a></li>
+                        <li><strong>GitHub: </strong> <a class="link" href="https://github.com/Glanya">Glanya</a></li>
+                    </ul>
+                </article>
             </div>
-        </section>
 
-        <section id="skills">
-            <h2>Skills</h2>
-            <div class="section-container-paddings">
-                <ul class="list">
-                    <li><strong>Primary: </strong>JS Basic, HTML, CSS</li>
-                    <li><strong>User experience design (UXD): </strong>HTML5, SCSS, Flexbox, Grid layout – novice level</li>
-                    <li><strong>Tools: </strong>VSCode, git, GitHub</li>
+            <nav>
+                <ul class="menu">
+                    <li>
+                        <a class="link" href="#about-me">About me</a>
+                    </li>
+                    <li>
+                        <a class="link" href="#skills">Skills</a>
+                    </li>
+                    <li>
+                        <a class="link" href="#education">Education</a>
+                    </li>
+                    <li>
+                        <a class="link" href="#work-experience">Work experience</a>
+                    </li>
+                    <li>
+                        <a class="link" href="#english">English</a>
+                    </li>
+                    <li>
+                        <a class="link" href="#code-example">Code example</a>
+                    </li>
+                    <li>
+                        <a class="link" href="#projects">Projects</a>
+                    </li>
                 </ul>
-            </div>
-        </section>
+            </nav>
+        </header>
 
-        <section id="education">
-            <h2>Education</h2>
-            <div class="section-container-paddings">
-                <ul class="list">
-                    <li>Secondary education</li>
-                    <li>07.2021 - 09.2021 RS School stage0 “JS/Frontend development course, preparatory stage”</li>
-                </ul>
-            </div>
-        </section>
+        <main>
+            <section id="about-me">
+                <h2>About me</h2>
+                <div class="section-container-paddings">
+                    <p>А purposeful person, motivated to constantly develop and set new goals for myself. I always try
+                        to learn quickly and apply my knowledge in practice.</p>
+                </div>
+            </section>
 
-        <section id="work-experience">
-            <h2>Work experience</h2>
-            <div class="section-container-paddings">
-                <ul class="list">
-                    <li>No work experience</li>
-                </ul>
-            </div>
-        </section>
+            <section id="skills">
+                <h2>Skills</h2>
+                <div class="section-container-paddings">
+                    <ul class="list">
+                        <li><strong>Primary: </strong>JS Basic, HTML, CSS</li>
+                        <li><strong>User experience design (UXD): </strong>HTML5, SCSS, Flexbox, Grid layout – novice
+                            level</li>
+                        <li><strong>Tools: </strong>VSCode, git, GitHub</li>
+                    </ul>
+                </div>
+            </section>
 
-        <section id="english">
-            <h2>English</h2>
-            <div class="section-container-paddings">
-                <ul class="list">
-                    <li>A2/B1</li>
-                </ul>
-            </div>
-        </section>
+            <section id="education">
+                <h2>Education</h2>
+                <div class="section-container-paddings">
+                    <ul class="list">
+                        <li>Secondary education</li>
+                        <li>07.2021 - 09.2021 RS School stage0 “JS/Frontend development course, preparatory stage”</li>
+                    </ul>
+                </div>
+            </section>
 
-        <section id="code-example">
-            <h2>Code example</h2>
-            <div class="section-container-paddings">
-                <ul class="list">
-                    <li><a href="https://rolling-scopes-school.github.io/glanya-JSFEPRESCHOOL/museum/" class="project-link link">Project "Museum"</a> (The project in the process of developing)</li>
-                </ul>
-            </div>
-        </section>
-    </main>
+            <section id="work-experience">
+                <h2>Work experience</h2>
+                <div class="section-container-paddings">
+                    <ul class="list">
+                        <li>No work experience</li>
+                    </ul>
+                </div>
+            </section>
 
-    <footer>
-        <a href="https://github.com/Glanya"><img class="git-icon icon" src="assets/github.png" alt="GitHub"></a>
-        <h3>2021</h3>
-        <a href="https://rs.school/js"><img class="rss-icon icon" src="https://rs.school/images/rs_school_js.svg"
-                alt="Course"></a>
-    </footer>
-</div>
+            <section id="english">
+                <h2>English</h2>
+                <div class="section-container-paddings">
+                    <ul class="list">
+                        <li>A2/B1</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="code-example">
+                <h2>Code example</h2>
+                <div class="section-container-paddings">
+                    <pre>
+                    <code class="js-code">
+                        function createPhoneNumber(numbers){
+                            numbers = numbers.join('');
+                            return '(' + numbers.substring(0, 3) + ') ' 
+                                + numbers.substring(3, 6) 
+                                + '-' 
+                                + numbers.substring(6);
+                          }
+                    </code>
+                </pre>
+                </div>
+            </section>
+
+            <section id="projects">
+                <h2>Projects</h2>
+                <div class="section-container-paddings projects">
+                    <ul class=" list">
+                        <li class="project__item"><a
+                                href="https://rolling-scopes-school.github.io/glanya-JSFEPRESCHOOL/museum/"
+                                class="link"><img class="project__img" src="assets/museum.jpg" alt="Museum">
+                                <div class="project__description">
+                                    <h3>Museum</h3>
+                                    <p>A landing page for Louvre</p>
+                                    <p>HTML, CSS</p>
+                                </div>
+                            </a></li>
+                        <li class="project__item"><a
+                                href="https://rolling-scopes-school.github.io/glanya-JSFEPRESCHOOL/vertical-slider/"
+                                class="link"><img class="project__img" src="assets/slider.jpg" alt="Vertical slider">
+                                <div class="project__description">
+                                    <h3>Vertical Slider</h3>
+                                    <p>Vertical slider using JS</p>
+                                    <p>HTML, CSS, JS</p>
+                                </div>
+                            </a></li>
+                        <li class="project__item"><a
+                                href="https://rolling-scopes-school.github.io/glanya-JSFEPRESCHOOL/custom-video-player/"
+                                class="link"><img class="project__img" src="assets/player.jpg"
+                                    alt="Custom video player">
+                                <div class="project__description">
+                                    <h3>Video Player</h3>
+                                    <p>Custom HTML5 Video Player</p>
+                                    <p>HTML, CSS, JS</p>
+                                </div>
+                            </a></li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <a href="https://github.com/Glanya"><img class="git-icon icon" src="assets/github.png" alt="GitHub"></a>
+            <h4>2021</h4>
+            <a href="https://rs.school/js"><img class="rss-icon icon" src="https://rs.school/images/rs_school_js.svg"
+                    alt="Course"></a>
+        </footer>
+    </div>
+    <script>
+        console.log('Total score (145/160):  видео-резюме отсутствует');
+        console.log('- вёрстка валидная (10/10) Надпись "Document checking completed. No errors or warnings to show."');
+        console.log('- вёрстка семантическая (20/20) В коде страницы присутствуют семантические теги HTML5: article, footer, header, main, nav, section, используются заголовки h1, h2, h3, h4 ');
+        console.log('- для оформления СV используются css-стили (10/10)');
+        console.log('- контент размещается в блоке, который горизонтально центрируется на странице. Фоновый цвет тянется во всю ширину страницы (10/10)');
+        console.log('- вёрстка адаптивная: ни на одном из разрешений экрана до 320px включительно не появляется горизонтальная полоса прокрутки, при этом всё содержание страницы сохраняется (10/10)');
+        console.log('- есть адаптивное бургер-меню. Ссылки в пунктах меню ведут на основные разделы CV. При кликах по пунктам меню реализована плавная прокрутка по якорям. При уменьшении ширины экрана меню становится адаптивным. (10/10)');
+        console.log('- на странице СV присутствует изображение - фото или аватарка автора CV, пропорции изображения не искажены, у изображения есть атрибут alt (может быть пустым) (10/10)');
+        console.log('- контакты для связи и перечень навыков оформлены в виде списка ul > li (10/10)');
+        console.log('- CV содержит контакты для связи, краткую информацию о себе, перечень навыков, информацию об образовании и уровне английского (10/10)');
+        console.log('- CV содержит пример кода (решение задачи с сайта codewars) с подсветкой кода (10/10)');
+        console.log('- CV содержит изображения-ссылки на выполненные вами проекты. При клике по изображению страница проекта открывается в новой вкладке. У каждого проекта есть название, небольшое описание, указан перечень используемых технологий. (10/10)');
+        console.log('- CV выполнено на английском языке (10/10)');
+        console.log('- выполнены требования к Pull Request: есть ссылка на задание, скриншот страницы СV, ссылка на деплой страницы CV на GitHub Pages, выполнена самооценка (самооценку расписываем по пунктам критериев оценки, указывая балл за каждый пункт) (10/10)');
+        console.log('- дизайн, оформление, качество выполнения CV не ниже чем в примерах CV, приведённых в материалах к заданию (это дополнительные 10 баллов, поэтому некоторый субъективизм в оценке может присутствовать) (5/10)');
+    </script>
 </body>
+
 </html>

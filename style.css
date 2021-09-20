@@ -8,16 +8,16 @@ body {
     display:flex;
     flex-direction: column;
     margin: auto;
-    max-width: 900px;
-    box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.6);
     background-color: #f6f2f3;
 }
 
 
 .wrapper {
     margin: 0 auto;
-    max-width: 900px;
+    max-width: 1000px;
+    box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.5); 
 }
+
 
 header {
     flex-direction: row;
@@ -29,37 +29,117 @@ header {
 
 .header-inf {
     display: flex;
-    padding: 20px;
-    margin-bottom: -55px
+    padding: 20px 45px;
+    margin-bottom: -60px
 }
 
 .header_photo {
     border: 5px solid #c29e97;
-    border-radius: 50%;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25);
 }
 
 h1 {
-    margin: 50px 10px 10px 10px;
-    font-size: 32px;
+    margin: 50px 20px 20px 20px;
+    font-size: 36px;
     text-transform: uppercase;
     text-align: center;
 }
 
 .contacts  {
     display: inline;
-    padding: 0px 30px 0px 0px;
+    padding: 0px 20px 0px 0px;
 }
 
-.header-menu {
+.burger {
+    display: none;
+}
+
+#menu__toggle {
+    opacity: 0;
+}
+
+.menu__btn {
+    display: flex;
+    align-items: center; 
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 26px;
+  height: 2px;
+  background-color: black;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+
+.burger-menu {
+    visibility: hidden;
+    width: 150px;
+    height: 100px;
+    margin: 0;
+    padding: 20px 0 80px;
+    list-style: none;
+    text-align: center;
+    background-color: #e0cfc7;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+
+}
+#menu__toggle:checked ~ .burger-menu {
+    visibility: visible;
+    left: 0;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  transition-duration: .25s;
+}
+.menu__box {
+  transition-duration: .25s;
+}
+.burger__item {
+  display: block;
+  transition-duration: .10s;
+}
+
+.menu {
     list-style-type: none;
     text-align: right;
     padding-bottom: 15px;
 }
   
-.header-menu li {
+.menu li {
     display: inline;
     padding: 0px 30px 0px 0px;
 }
+
 
 .link {
     text-decoration: none;
@@ -76,7 +156,6 @@ h1 {
     margin-right: auto;
     margin-top: 20px;
     padding: 20px 10px;
-    max-width: 900px;
     background-color: #e0cfc7;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1); 
 }
@@ -88,6 +167,10 @@ h2 {
 
 h3 {
     text-align: center;
+}
+
+h4 {
+    
     font-size: 26px;
 }
 
@@ -114,7 +197,7 @@ p {
 
  footer {
     height: 80px;
-    margin: 10px 0px 0px 0px;
+    margin-top: 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -135,4 +218,70 @@ p {
 .rss-icon { 
     width: 100px;
     height: auto; 
+} 
+
+.project__img {
+    height: 280px;
+    width: 550px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    border: 3px solid;
+    border-radius: 20px;
+}
+
+.project__item a{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px;
+    margin-bottom: 20px;
+}
+
+.project__description {
+    text-align: right;
+    width: 40%;
+}
+
+.project__description p {
+    margin: 0;
+}
+
+@media screen and (max-width:650px){ 
+    .wrapper {
+        max-width: none;
+        align-content: center;;
+    }
+
+    .header-inf {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu {
+        visibility: hidden;
+    }
+
+    .burger {
+        display: flex;
+        position: absolute;
+        left: 0;
+        z-index: 2;
+    }
+
+    .js-code {
+        white-space: pre-wrap;
+        word-break: break-all;
+    }
+
+    .project__img {
+        height: 180px;
+        width: 350px;
+    }
+
+    .project__item a{
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
 }
