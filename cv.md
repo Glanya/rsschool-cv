@@ -38,6 +38,6 @@ Junior front-end developer with some experience in development user interface us
 + Polish: B2 (Upper-Intermediate) 
 ## WORK EXAMPLE:
 + [Louvre Museum](https://rolling-scopes-school.github.io/glanya-JSFEPRESCHOOL/museum/) - HTML, CSS, adaptive layout 
-_The project in the process of developing_
+(_The project in the process of developing_)
 + [PizzaSliceApp](https://4swsqh.csb.app) - HTML, CSS, JavaScript
-_The PizzaSliceApp is an app that orders pizza and slices it according to the number of guests_
+(_The PizzaSliceApp is an app that orders pizza and slices it according to the number of guests_)
