@@ -1,1 +1,2 @@
-https://glanya.github.io/rsschool-cv/
+https://Glanya.github.io/rsschool-cv/
+
